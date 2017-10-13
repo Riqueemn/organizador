@@ -10,8 +10,20 @@
   <ion-list>
 
     <ion-item>
-      <ion-input type="text" [(ngModel)]="nomes"></ion-input>
+      <ion-label>Nomes</ion-label><ion-input type="text" id="text" [(ngModel)]="nome" ></ion-input>
     </ion-item>
 
   </ion-list>
+
+  <button ion-button (click)="enviar()" color="danger">Enviar</button>
+  <h4>{{nomesImprimir}}</h4>
+
+  <button ion-button (click)="organizar()" color="danger">Organizar</button>
+  
+
+  <h2>{{nomesOrganizados2}}</h2>
+
+  <button ion-button color="balanced" *ngIf="condicaoLimpar" (click)="limpar()">Limpar</button>
+
+
 </ion-content>
